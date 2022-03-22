@@ -48,7 +48,7 @@ mean_mon_3 <- as.numeric(as.character(runoff_mon_1Q[3, 2]))
 delta_1_to_2 <- numerical_to_percentage(pct_change_to_next_month(mean_mon_1, mean_mon_2))
 delta_2_to_3 <- numerical_to_percentage(pct_change_to_next_month(mean_mon_2, mean_mon_3))
 
-NO_NEXT_MONTH_TO_COMPARE <- 0
+NO_NEXT_MONTH_TO_COMPARE <- 99
 runoff_pct_change_mon_1Q <- runoff_mon_1Q[, "%_delta_to_next_month" := c(delta_1_to_2, delta_2_to_3, NO_NEXT_MONTH_TO_COMPARE)]
 
 saveRDS(runoff_dt, file = './assignments/dt_assignment_1_20220321.rds') #As assignment
