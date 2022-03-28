@@ -51,6 +51,12 @@ ggplot(runoff_month, aes(x = factor(month), y = value)) +
 
 ### 4
 
+ggplot(runoff_day, aes(x = sname, y = value)) +
+  geom_boxplot(outlier.colour="black", outlier.shape=1, outlier.size=2,
+               fill='#CDCDCD') + 
+  stat_summary(fun = "mean", geom = "point", shape = 13, size = 4, color = "red") +
+  coord_flip() 
+
 
 ### 5
 
